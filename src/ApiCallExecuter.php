@@ -23,7 +23,7 @@ class ApiCallExecuter
 
     public function __construct(KonnektiveConfig $config)
     {
-        $this->client = new GuzzleHttp\Client(['base_uri' => $config->getApiUrl()]);
+        $this->client = new Client(['base_uri' => $config->getApiUrl()]);
 
         $this->config = $config;
     }
