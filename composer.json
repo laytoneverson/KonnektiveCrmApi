@@ -6,11 +6,11 @@
         "guzzlehttp/guzzle": "^6.3"
     },
     "autoload": {
-        "PSR-4": {
-            "LE\\KonnektiveCrmApi": "src/"
+        "psr-4": {
+            "LE\\KonnektiveCrmApi\\": "src/"
         }
     },
-    "license": " GNU GENERAL PUBLIC LICENSE",
+    "license": "GPL-1.0",
     "authors": [
         {
             "name": "Layton Everson",
