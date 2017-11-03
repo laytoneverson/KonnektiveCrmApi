@@ -1,0 +1,21 @@
+{
+    "name": "laytoneverson/konnektive-crm-api",
+    "description": "Easy API integrations with Konnektive CRM",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+        "PSR-4": {
+            "LE\\KonnektiveCrmApi": "src/"
+        }
+    },
+    "license": " GNU GENERAL PUBLIC LICENSE",
+    "authors": [
+        {
+            "name": "Layton Everson",
+            "email": "layton.everson@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
