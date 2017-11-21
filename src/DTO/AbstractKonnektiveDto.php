@@ -7,6 +7,10 @@ namespace LE\KonnektiveCrmApi\DTO;
  */
 abstract class AbstractKonnektiveDto
 {
+    /**
+     * AbstractKonnektiveDto constructor.
+     * @param array $data
+     */
     public function __construct($data = [])
     {
         foreach ($data as $k => $v) {

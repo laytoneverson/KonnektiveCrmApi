@@ -3,8 +3,13 @@
 namespace LE\KonnektiveCrmApi;
 
 use LE\KonnektiveCrmApi\ApiCall;
+use LE\KonnektiveCrmApi\ApiCall\AbstractApiCall;
 use LE\KonnektiveCrmApi\DTO;
 
+/**
+ * Class KonnektiveCrmApi
+ * @package LE\KonnektiveCrmApi
+ */
 class KonnektiveCrmApi implements KonnektiveContantsInterface
 {
     /**
@@ -15,14 +20,25 @@ class KonnektiveCrmApi implements KonnektiveContantsInterface
     /**
      * @var ApiCallExecuter
      */
-    private $executer;
+    private $executor;
 
+    /**
+     * KonnektiveCrmApi constructor.
+     * @param KonnektiveConfig $config
+     */
     public function __construct(KonnektiveConfig $config)
     {
         $this->konnektiveConfig = $config;
-        $this->executer = new ApiCallExecuter($config);
+
+        $this->executor = new ApiCallExecuter($config);
     }
 
+    /**
+     * @param $userName
+     * @param $password
+     * @param $requestUrl
+     * @return KonnektiveConfig
+     */
     public static function createConfig($userName, $password, $requestUrl)
     {
         return new KonnektiveConfig($userName, $password, $requestUrl);
@@ -32,7 +48,6 @@ class KonnektiveCrmApi implements KonnektiveContantsInterface
      * Use the KonnektiveCrmApi::CALL_{CALL_NAME} hints. i.e. $kCrm->newCall(KonnektiveCrmApi::CALL_ADD_LEAD)
      *
      * @param $callFqn
-     * @param \KonnektiveDTOInterface null $dtoObject
      * @return AbstractApiCall
      */
     public static function createNewCall($callFqn, $dtoObject = null)
@@ -58,8 +73,8 @@ class KonnektiveCrmApi implements KonnektiveContantsInterface
      */
     public function executeCall(ApiCall\AbstractApiCall $apiCall)
     {
-        $this->executer->setApiCall($apiCall);
+        $this->executor->setApiCall($apiCall);
 
-        return $this->executer->execute();
+        return $this->executor->execute();
     }
 }

@@ -4,11 +4,15 @@ namespace LE\KonnektiveCrmApi\Exception;
 
 use Throwable;
 
+/**
+ * Class KonnektiveApiException
+ * @package LE\KonnektiveCrmApi\Exception
+ */
 class KonnektiveApiException extends \Exception
 {
-    const ERROR_VALIDATION_FAILED = 1000;
-    const ERROR_MISSING_FIELD_CODE = 1001;
-    const ERROR_MISSING_VALUE_CODE = 1002;
+    public const ERROR_VALIDATION_FAILED = 1000;
+    public const ERROR_MISSING_FIELD_CODE = 1001;
+    public const ERROR_MISSING_VALUE_CODE = 1002;
 
     protected $apiCall;
 
@@ -22,12 +26,15 @@ class KonnektiveApiException extends \Exception
      * @param int $code
      * @param Throwable|null $previous
      */
-    public function __construct($apiCall = '', $fields = '',  $message = "", $code = self::ERROR_VALIDATION_FAILED, Throwable $previous = null)
-    {
+    public function __construct(
+        $apiCall = '',
+        $fields = '',
+        $message =  "General validation failed exception",
+        $code = self::ERROR_VALIDATION_FAILED,
+        Throwable $previous = null
+    ) {
         $this->apiCall = $apiCall;
         $this->fields = $fields;
-
-        $message = "General validation failed exception";
 
         parent::__construct($message, $code, $previous);
     }

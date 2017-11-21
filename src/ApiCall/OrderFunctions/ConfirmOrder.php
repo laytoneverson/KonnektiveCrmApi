@@ -8,8 +8,8 @@ use LE\KonnektiveCrmApi\KonnektiveCrmApi;
 
 class ConfirmOrder extends AbstractApiCall
 {
-    const API_URI = '/order/confirm/';
-    const DTO_CLASS_FQN = ImportLeadDto::class;
-    const CALL_NAME = 'OrderFunctions\ConfirmOrder';
-    const REQUEST_METHOD = "POST";
+    public const API_URI = '/order/confirm/';
+    public const DTO_CLASS_FQN = ImportLeadDto::class;
+    public const CALL_NAME = 'OrderFunctions\ConfirmOrder';
+    public const REQUEST_METHOD = "POST";
 }

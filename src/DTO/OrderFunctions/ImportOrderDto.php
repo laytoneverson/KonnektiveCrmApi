@@ -4,12 +4,16 @@ namespace LE\KonnektiveCrmApi\DTO\OrderFunctions;
 
 use LE\KonnektiveCrmApi\DTO\AbstractKonnektiveDto;
 
+/**
+ * Class ImportOrderDto
+ * @package LE\KonnektiveCrmApi\DTO\OrderFunctions
+ */
 class ImportOrderDto extends AbstractKonnektiveDto
 {
-    const PAYSOURCE_CREDITCARD = 'CREDITCARD';
-    const PAYSOURCE_CHECK = 'CHECK';
-    const PAYSOURCE_ACCTONFILE = 'ACCTONFILE';
-    const PAYSOURCE_PREPAID = 'PREPAID';
+    public const PAYSOURCE_CREDITCARD = 'CREDITCARD';
+    public const PAYSOURCE_CHECK = 'CHECK';
+    public const PAYSOURCE_ACCTONFILE = 'ACCTONFILE';
+    public const PAYSOURCE_PREPAID = 'PREPAID';
 
     /**
      * @var string
@@ -117,7 +121,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     private $paySource;
 
     /**
-     * @var integer
+     * @var string
      */
     private $cardNumber;
     /**
@@ -129,7 +133,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      */
     private $cardYear;
     /**
-     * @var integer
+     * @var string
      */
     private $cardSecurityCode;
     /**
@@ -803,10 +807,10 @@ class ImportOrderDto extends AbstractKonnektiveDto
     }
 
     /**
-     * @param int $cardNumber
+     * @param string $cardNumber
      * @return ImportOrderDto
      */
-    public function setCardNumber(int $cardNumber): ImportOrderDto
+    public function setCardNumber(string $cardNumber): ImportOrderDto
     {
         $this->cardNumber = $cardNumber;
 
@@ -860,10 +864,10 @@ class ImportOrderDto extends AbstractKonnektiveDto
     }
 
     /**
-     * @param int $cardSecurityCode
+     * @param string $cardSecurityCode
      * @return ImportOrderDto
      */
-    public function setCardSecurityCode(int $cardSecurityCode): ImportOrderDto
+    public function setCardSecurityCode(string $cardSecurityCode): ImportOrderDto
     {
         $this->cardSecurityCode = $cardSecurityCode;
 

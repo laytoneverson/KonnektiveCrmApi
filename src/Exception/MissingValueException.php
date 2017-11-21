@@ -4,6 +4,10 @@ namespace LE\KonnektiveCrmApi\Exception;
 
 use Throwable;
 
+/**
+ * Class MissingValueException
+ * @package LE\KonnektiveCrmApi\Exception
+ */
 class MissingValueException extends KonnektiveApiException
 {
     /**

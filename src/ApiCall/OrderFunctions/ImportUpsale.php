@@ -8,8 +8,8 @@ use LE\KonnektiveCrmApi\KonnektiveCrmApi;
 
 class ImportUpsale extends AbstractApiCall
 {
-    const API_URI = "/upsale/import/";
-    const DTO_CLASS_FQN = ImportLeadDto::class;
-    const CALL_NAME = 'OrderFunctions\ImportUpsale';
-    const REQUEST_METHOD = "POST";
+    public const API_URI = "/upsale/import/";
+    public const DTO_CLASS_FQN = ImportLeadDto::class;
+    public const CALL_NAME = 'OrderFunctions\ImportUpsale';
+    public const REQUEST_METHOD = "POST";
 }

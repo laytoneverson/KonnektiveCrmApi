@@ -2,12 +2,14 @@
 
 namespace LE\KonnektiveCrmApi;
 
-
+/**
+ * Interface KonnektiveContantsInterface
+ * @package LE\KonnektiveCrmApi
+ */
 interface KonnektiveContantsInterface
 {
     /* API CALLS */
     public const CALL_IMPORT_CLICK = ApiCall\LandingPages\ImportClick::class;
-
     public const CALL_CANCEL_ORDER = ApiCall\OrderFunctions\CancelOrder::class;
     public const CALL_CONFIRM_ORDER = ApiCall\OrderFunctions\ConfirmOrder::class;
     public const CALL_IMPORT_LEAD = ApiCall\OrderFunctions\ImportLead::class;

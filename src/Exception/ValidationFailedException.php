@@ -4,6 +4,10 @@ namespace LE\KonnektiveCrmApi\Exception;
 
 use Throwable;
 
+/**
+ * Class ValidationFailedException
+ * @package LE\KonnektiveCrmApi\Exception
+ */
 class ValidationFailedException extends KonnektiveApiException
 {
     protected $message = "Api call failed validation!";

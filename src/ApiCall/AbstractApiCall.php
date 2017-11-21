@@ -6,16 +6,16 @@ use LE\KonnektiveCrmApi\DTO\AbstractKonnektiveDto;
 use LE\KonnektiveCrmApi\Exception\MissingFieldException;
 use LE\KonnektiveCrmApi\Exception\MissingValueException;
 
-class AbstractApiCall
+/**
+ * Class AbstractApiCall
+ * @package LE\KonnektiveCrmApi\ApiCall
+ */
+class AbstractApiCall implements ApiCallInterface
 {
-    const CALL_NAME = self::CALL_NAME;
-    const DTO_CLASS_FQN = self::DTO_CLASS_NAME;
-    const API_URI = self::API_URI;
-    const REQUEST_METHOD = self::API_URI;
-
-    const RESULT_FORMAT_JSON = "json";
-    const RESULT_FORMAT_ARRAY = "array";
-    const RESULT_FORMAT_OBJECT = "object";
+    public const CALL_NAME = self::CALL_NAME;
+    public const DTO_CLASS_FQN = self::DTO_CLASS_FQN;
+    public const API_URI = self::API_URI;
+    public const REQUEST_METHOD = self::API_URI;
 
     /**
      * @var AbstractKonnektiveDto
@@ -85,6 +85,7 @@ class AbstractApiCall
      * @return void
      * @throws MissingFieldException
      * @throws MissingValueException
+     *
      */
     public function validate()
     {

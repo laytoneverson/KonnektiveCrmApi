@@ -2,12 +2,22 @@
 
 namespace LE\KonnektiveCrmApi;
 
+/**
+ * Class KonnektiveConfig
+ * @package LE\KonnektiveCrmApi
+ */
 class KonnektiveConfig
 {
     protected $apiUserName = '';
     protected $apiPassword = '';
     protected $apiUrl = '';
 
+    /**
+     * KonnektiveConfig constructor.
+     * @param $apiUser
+     * @param $apiPassword
+     * @param $apiUrl
+     */
     public function __construct($apiUser, $apiPassword, $apiUrl)
     {
         $this->apiUserName = $apiUser;

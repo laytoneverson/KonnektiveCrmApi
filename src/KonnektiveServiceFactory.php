@@ -15,6 +15,10 @@ namespace LE\KonnektiveCrmApi;
  */
 class KonnektiveServiceFactory
 {
+    /**
+     * @param $konnectiveConfig
+     * @return KonnektiveCrmApi
+     */
     public function __invoke($konnectiveConfig)
     {
         $config = KonnektiveCrmApi::createConfig(

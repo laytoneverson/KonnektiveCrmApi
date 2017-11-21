@@ -4,6 +4,10 @@ namespace LE\KonnektiveCrmApi\DTO\OrderFunctions;
 
 use LE\KonnektiveCrmApi\DTO\AbstractKonnektiveDto;
 
+/**
+ * Class ImportLeadDto
+ * @package LE\KonnektiveCrmApi\DTO\OrderFunctions
+ */
 class ImportLeadDto extends AbstractKonnektiveDto
 {
     /**
