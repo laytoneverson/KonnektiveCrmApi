@@ -18,256 +18,256 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @var string
      */
-    private $orderId;
+    private $orderId = '';
     /**
      * @var string
      */
-    private $sessionId;
+    private $sessionId = '';
     /**
      * @var string
      */
-    private $customerId;
+    private $customerId = '';
     /**
      * @var string
      */
-    private $firstName;
+    private $firstName = '';
     /**
      * @var string
      */
-    private $lastName;
+    private $lastName = '';
     /**
      * @var string
      */
-    private $companyName;
+    private $companyName = '';
     /**
      * @var string
      */
-    private $address1;
+    private $address1 = '';
     /**
      * @var string
      */
-    private $address2;
+    private $address2 = '';
     /**
      * @var string
      */
-    private $postalCode;
+    private $postalCode = '';
     /**
      * @var string
      */
-    private $city;
+    private $city = '';
     /**
      * @var string
      */
-    private $state;
+    private $state = '';
     /**
      * @var string
      */
-    private $country;
+    private $country = '';
     /**
      * @var string
      */
-    private $emailAddress;
+    private $emailAddress = '';
     /**
      * @var string
      */
-    private $phoneNumber;
+    private $phoneNumber = '';
     /**
      * @var string
      */
-    private $ipAddress;
+    private $ipAddress = '';
     /**
      * @var boolean
      */
-    private $billShipSame;
+    private $billShipSame = 1;
     /**
      * @var string
      */
-    private $shipFirstName;
+    private $shipFirstName = '';
     /**
      * @var string
      */
-    private $shipLastName;
+    private $shipLastName = '';
     /**
      * @var string
      */
-    private $shipCompanyName;
+    private $shipCompanyName = '';
     /**
      * @var string
      */
-    private $shipAddress1;
+    private $shipAddress1 = '';
     /**
      * @var string
      */
-    private $shipAddress2;
+    private $shipAddress2 = '';
     /**
      * @var string
      */
-    private $shipPostalCode;
+    private $shipPostalCode = '';
     /**
      * @var string
      */
-    private $shipCity;
+    private $shipCity = '';
     /**
      * @var string
      */
-    private $shipState;
+    private $shipState = '';
     /**
      * @var string
      */
-    private $shipCountry;
+    private $shipCountry = '';
     /**
      * @var string
      */
-    private $paySource;
+    private $paySource = '';
 
     /**
      * @var string
      */
-    private $cardNumber;
+    private $cardNumber = '';
     /**
      * @var string
      */
-    private $cardMonth;
+    private $cardMonth = '';
     /**
      * @var string
      */
-    private $cardYear;
+    private $cardYear = '';
     /**
      * @var string
      */
-    private $cardSecurityCode;
+    private $cardSecurityCode = '';
     /**
      * @var integer
      */
-    private $forceMerchantId;
+    private $forceMerchantId = 0;
     /**
      * @var integer
      */
-    private $preAuthBillerId;
+    private $preAuthBillerId = 0;
     /**
      * @var string
      */
-    private $preAuthMerchantTxnId;
+    private $preAuthMerchantTxnId = 0;
     /**
      * @var float
      */
-    private $salesTax;
+    private $salesTax = 0.00;
     /**
      * @var integer
      */
-    private $achAccountType;
+    private $achAccountType = 0;
     /**
      * @var integer
      */
-    private $achRoutingNumber;
+    private $achRoutingNumber = 0;
     /**
      * @var integer
      */
-    private $achAccountNumber;
+    private $achAccountNumber = 0;
     /**
      * @var integer
      */
-    private $campaignId;
+    private $campaignId = 0;
     /**
      * @var boolean
      */
-    private $forceQA;
+    private $forceQA = 0;
     /**
      * @var boolean
      */
-    private $insureShipment;
+    private $insureShipment = 0;
     /**
      * @var string
      */
-    private $couponCode;
+    private $couponCode = '';
     /**
      * @var integer
      */
-    private $shipProfileId;
+    private $shipProfileId = 0;
     /**
      * @var string
      */
-    private $salesUrl;
+    private $salesUrl = '';
     /**
      * @var string
      */
-    private $affId;
+    private $affId = '';
     /**
      * @var string
      */
-    private $sourceValue1;
+    private $sourceValue1 = '';
     /**
      * @var string
      */
-    private $sourceValue2;
+    private $sourceValue2 = '';
     /**
      * @var string
      */
-    private $sourceValue3;
+    private $sourceValue3 = '';
     /**
      * @var string
      */
-    private $sourceValue4;
+    private $sourceValue4 = '';
     /**
      * @var string
      */
-    private $sourceValue5;
+    private $sourceValue5 = '';
     /**
      * @var string
      */
-    private $custom1;
+    private $custom1 = '';
     /**
      * @var string
      */
-    private $custom2;
+    private $custom2 = '';
     /**
      * @var string
      */
-    private $custom3;
+    private $custom3 = '';
     /**
      * @var string
      */
-    private $custom4;
+    private $custom4 = '';
     /**
      * @var string
      */
-    private $custom5;
+    private $custom5 = '';
     /**
      * @var string
      */
-    private $redirectsTo;
+    private $redirectsTo = '';
     /**
      * @var string
      */
-    private $errorRedirectsTo;
+    private $errorRedirectsTo = '';
     /**
      * @var string
      */
-    private $eci;
+    private $eci = '';
     /**
      * @var string
      */
-    private $xid;
+    private $xid = '';
     /**
      * @var string
      */
-    private $cavv;
+    private $cavv = '';
     /**
      * @var string
      */
-    private $rebill_eci;
+    private $rebill_eci = '';
     /**
      * @var string
      */
-    private $rebill_xid;
+    private $rebill_xid = '';
     /**
      * @var string
      */
-    private $rebill_cavv;
+    private $rebill_cavv = '';
     /**
      * @var boolean
      */
-    private $disableCustomerDedup;
+    private $disableCustomerDedup = 0;
 
     /**
      * @var array
@@ -292,6 +292,8 @@ class ImportOrderDto extends AbstractKonnektiveDto
                 $ret[$keyPrep . "shipPrice"] = $product['price'];
             }
         }
+
+        return $ret;
     }
 
 
@@ -440,7 +442,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $address2
      * @return ImportOrderDto
      */
-    public function setAddress2(string $address2): ImportOrderDto
+    public function setAddress2(string $address2 = ''): ImportOrderDto
     {
         $this->address2 = $address2;
 

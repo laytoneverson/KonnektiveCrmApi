@@ -64,12 +64,13 @@ class ApiCallExecuter
         $dataKeyValue = ($method === "GET")
             ? "query"
             : 'form_params';
+        $requestData = $this->getRequestBody();
 
         /**
          * @var $response \Psr\Http\Message\ResponseInterface
          */
         $response = $this->client->request($method, $apiUri, [
-            $dataKeyValue => $this->getRequestBody()
+            $dataKeyValue => $requestData
         ]);
 
         if ($response->getStatusCode() !== 200) {
@@ -87,7 +88,7 @@ class ApiCallExecuter
         if (!\array_key_exists('result', $responseData)) {
             $this->apiCall->setResultSuccess(false)
                 ->setResultMessage("Unable to read response")
-                ->setResultData($response->getBody());
+                ->setResultData($responseData);
 
             return false;
         }

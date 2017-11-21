@@ -34,7 +34,7 @@ class KonnektiveConfig
     {
         return [
             'loginId' => $this->getApiUserName(),
-            'password' => $this->getApiUserName(),
+            'password' => $this->getApiPassword(),
         ];
     }
 

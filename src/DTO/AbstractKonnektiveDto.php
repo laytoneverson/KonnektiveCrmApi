@@ -1,6 +1,13 @@
 <?php
 
 namespace LE\KonnektiveCrmApi\DTO;
+use function call_user_func;
+use function get_class;
+use function get_class_methods;
+use function lcfirst;
+use ReflectionClass;
+use ReflectionMethod;
+use function substr;
 
 /**
  * Interface KonnektiveDTOInterface
@@ -18,7 +25,7 @@ abstract class AbstractKonnektiveDto
             $callableFunc = [$this, $setter];
 
             if (\is_callable($callableFunc)) {
-                \call_user_func($callableFunc, $v);
+                $callableFunc($v);
             }
         }
     }
@@ -28,10 +35,29 @@ abstract class AbstractKonnektiveDto
      */
     public function toArray()
     {
+        $reflectedClass = new ReflectionClass($this);
+        $methods = $reflectedClass->getMethods();
+
+        /**
+         * Gets all values from "getter" functions and loads them in an assoc array.
+         *
+         * @var $method ReflectionMethod
+         */
         $ret = [];
-        foreach ($this as $k => $v) {
-            $ret[$k] = \call_user_func([$this, "get" . \ucfirst($v)]);
+        foreach ($methods as $method) {
+            if (0 === strpos($method->name, "get")) {
+                if (!empty($d = $this->{$method->name}())) {
+                    $ret[lcfirst(substr($method->name,3))] = $d;
+                }
+
+            }
+            if (0 === strpos($method->name, "is")) {
+                if (!empty($d = $this->{$method->name}() )) {
+                    $ret[lcfirst(substr($method->name,2))] = $d;
+                }
+            }
         }
+
         return $ret;
     }
 }

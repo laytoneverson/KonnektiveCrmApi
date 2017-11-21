@@ -25,32 +25,32 @@ class AbstractApiCall implements ApiCallInterface
     /**
      * @var array
      */
-    protected $requestDataArray;
+    protected $requestDataArray = [];
 
     /**
      * @var boolean
      */
-    protected $resultSuccess;
+    protected $resultSuccess = 0;
 
     /**
      * @var string
      */
-    protected $resultMessage;
+    protected $resultMessage = '';
 
     /**
      * @var string
      */
-    protected $resultData;
+    protected $resultData = '';
 
     /**
      * @var string
      */
-    protected $errorMessage;
+    protected $errorMessage = '';
 
     /**
      * @var string
      */
-    protected $errorCode;
+    protected $errorCode = '';
 
     /**
      * Field names required for api call
@@ -74,7 +74,7 @@ class AbstractApiCall implements ApiCallInterface
      */
     public function createDataObject($data = [])
     {
-        $dtoPath = self::DTO_CLASS_FQN;
+        $dtoPath = static::DTO_CLASS_FQN;
 
         return new $dtoPath($data);
     }
@@ -89,12 +89,12 @@ class AbstractApiCall implements ApiCallInterface
      */
     public function validate()
     {
-        $requestArray = $this->getRequestArray();
+        $requestArray = $this->getRequestDataArray();
 
         foreach ($this->requiredFields as $f) {
             $exception = false;
 
-            if (!\array_key_exists($requestArray, $f)) {
+            if (!\array_key_exists($f,$requestArray)) {
                 $exception = new MissingFieldException(static::CALL_NAME, $f);
             }
 
@@ -135,7 +135,7 @@ class AbstractApiCall implements ApiCallInterface
      */
     public function getRequestDataArray(): array
     {
-        if (null === $this->requestDataArray) {
+        if (0 === count($this->requestDataArray)) {
             $this->requestDataArray = $this->requestDataDTO->toArray();
         }
 
@@ -187,16 +187,16 @@ class AbstractApiCall implements ApiCallInterface
      *
      * @return string|array|object Request Result
      */
-    public function getResultData($format = self::RESULT_FORMAT_ARRAY): string
+    public function getResultData($format = ApiCallInterface::RESULT_FORMAT_ARRAY): string
     {
         switch ($format) {
-            case self::RESULT_FORMAT_ARRAY:
+            case ApiCallInterface::RESULT_FORMAT_ARRAY:
                 return \GuzzleHttp\json_decode($this->resultData, true);
 
-            case self::RESULT_FORMAT_OBJECT:
+            case ApiCallInterface::RESULT_FORMAT_OBJECT:
                 return \GuzzleHttp\json_decode($this->resultData);
 
-            case self::RESULT_FORMAT_JSON:
+            case ApiCallInterface::RESULT_FORMAT_JSON:
                 return $this->resultData;
         }
 
@@ -257,7 +257,7 @@ class AbstractApiCall implements ApiCallInterface
      */
     public function getCallName()
     {
-        return self::CALL_NAME;
+        return static::CALL_NAME;
     }
 
     /**
@@ -265,7 +265,7 @@ class AbstractApiCall implements ApiCallInterface
      */
     public function getDataObjectClass()
     {
-        return self::DTO_CLASS_FQN;
+        return static::DTO_CLASS_FQN;
     }
 
     /**
@@ -273,7 +273,7 @@ class AbstractApiCall implements ApiCallInterface
      */
     public function getApiUri()
     {
-        return self::API_URI;
+        return static::API_URI;
     }
 
     /**
@@ -281,6 +281,6 @@ class AbstractApiCall implements ApiCallInterface
      */
     public function getRequestMethod()
     {
-        return self::REQUEST_METHOD;
+        return static::REQUEST_METHOD;
     }
 }

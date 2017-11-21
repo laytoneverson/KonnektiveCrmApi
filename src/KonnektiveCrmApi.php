@@ -15,7 +15,7 @@ class KonnektiveCrmApi implements KonnektiveContantsInterface
     /**
      * @var KonnektiveConfig
      */
-    private  $konnektiveConfig = '';
+    private  $konnektiveConfig;
 
     /**
      * @var ApiCallExecuter
@@ -29,7 +29,6 @@ class KonnektiveCrmApi implements KonnektiveContantsInterface
     public function __construct(KonnektiveConfig $config)
     {
         $this->konnektiveConfig = $config;
-
         $this->executor = new ApiCallExecuter($config);
     }
 
