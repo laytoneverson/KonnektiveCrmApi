@@ -44,7 +44,8 @@ class ApiCallExecuter
         try {
             $this->apiCall->validate();
         } catch (KonnektiveApiException $exception) {
-            $this->apiCall->setResultSuccess(false)
+            $this->apiCall
+                ->setResultSuccess(false)
                 ->setErrorCode($exception->getCode())
                 ->setErrorMessage($exception->getMessage())
                 ->setResultMessage("Request Unsuccessful");
@@ -55,7 +56,7 @@ class ApiCallExecuter
         //Send Request
         $apiUri = $this->apiCall->getApiUri();
         $method = $this->apiCall->getRequestMethod();
-        $dataKeyValue = ($method == "GET")
+        $dataKeyValue = ($method === "GET")
             ? "query"
             : 'form_params';
 

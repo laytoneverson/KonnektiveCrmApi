@@ -5,14 +5,8 @@ namespace LE\KonnektiveCrmApi;
 use LE\KonnektiveCrmApi\ApiCall;
 use LE\KonnektiveCrmApi\DTO;
 
-class KonnektiveCrmApi
+class KonnektiveCrmApi implements KonnektiveContantsInterface
 {
-    /* API CALLS */
-    const CALL_IMPORT_LEAD = ApiCall\OrderFunctions\ImportLead::class;
-
-    /* DTO */
-    const DTO_IMPORT_LEAD = DTO\OrderFunctions\ImportLeadDto::class;
-
     /**
      * @var KonnektiveConfig
      */
