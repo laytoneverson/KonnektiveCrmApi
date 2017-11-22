@@ -10,10 +10,10 @@ use LE\KonnektiveCrmApi\DTO\AbstractKonnektiveDto;
  */
 class ImportOrderDto extends AbstractKonnektiveDto
 {
-    public const PAYSOURCE_CREDITCARD = 'CREDITCARD';
-    public const PAYSOURCE_CHECK = 'CHECK';
-    public const PAYSOURCE_ACCTONFILE = 'ACCTONFILE';
-    public const PAYSOURCE_PREPAID = 'PREPAID';
+    const PAYSOURCE_CREDITCARD = 'CREDITCARD';
+    const PAYSOURCE_CHECK = 'CHECK';
+    const PAYSOURCE_ACCTONFILE = 'ACCTONFILE';
+    const PAYSOURCE_PREPAID = 'PREPAID';
 
     /**
      * @var string
@@ -300,7 +300,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getOrderId(): string
+    public function getOrderId()
     {
         return $this->orderId;
     }
@@ -309,7 +309,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $orderId
      * @return ImportOrderDto
      */
-    public function setOrderId(string $orderId): ImportOrderDto
+    public function setOrderId( $orderId)
     {
         $this->orderId = $orderId;
 
@@ -319,7 +319,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getSessionId(): string
+    public function getSessionId()
     {
         return $this->sessionId;
     }
@@ -328,7 +328,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $sessionId
      * @return ImportOrderDto
      */
-    public function setSessionId(string $sessionId): ImportOrderDto
+    public function setSessionId( $sessionId)
     {
         $this->sessionId = $sessionId;
 
@@ -338,7 +338,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getCustomerId(): string
+    public function getCustomerId()
     {
         return $this->customerId;
     }
@@ -347,7 +347,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $customerId
      * @return ImportOrderDto
      */
-    public function setCustomerId(string $customerId): ImportOrderDto
+    public function setCustomerId( $customerId)
     {
         $this->customerId = $customerId;
 
@@ -357,7 +357,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getFirstName(): string
+    public function getFirstName()
     {
         return $this->firstName;
     }
@@ -366,7 +366,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $firstName
      * @return ImportOrderDto
      */
-    public function setFirstName(string $firstName): ImportOrderDto
+    public function setFirstName( $firstName)
     {
         $this->firstName = $firstName;
 
@@ -376,7 +376,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getLastName(): string
+    public function getLastName()
     {
         return $this->lastName;
     }
@@ -385,7 +385,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $lastName
      * @return ImportOrderDto
      */
-    public function setLastName(string $lastName): ImportOrderDto
+    public function setLastName( $lastName)
     {
         $this->lastName = $lastName;
 
@@ -395,7 +395,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getCompanyName(): string
+    public function getCompanyName()
     {
         return $this->companyName;
     }
@@ -404,7 +404,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $companyName
      * @return ImportOrderDto
      */
-    public function setCompanyName(string $companyName): ImportOrderDto
+    public function setCompanyName( $companyName)
     {
         $this->companyName = $companyName;
 
@@ -414,7 +414,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getAddress1(): string
+    public function getAddress1()
     {
         return $this->address1;
     }
@@ -423,7 +423,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $address1
      * @return ImportOrderDto
      */
-    public function setAddress1(string $address1): ImportOrderDto
+    public function setAddress1( $address1)
     {
         $this->address1 = $address1;
 
@@ -433,7 +433,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getAddress2(): string
+    public function getAddress2()
     {
         return $this->address2;
     }
@@ -442,7 +442,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $address2
      * @return ImportOrderDto
      */
-    public function setAddress2(string $address2 = ''): ImportOrderDto
+    public function setAddress2( $address2 = '')
     {
         $this->address2 = $address2;
 
@@ -452,7 +452,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getPostalCode(): string
+    public function getPostalCode()
     {
         return $this->postalCode;
     }
@@ -461,7 +461,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $postalCode
      * @return ImportOrderDto
      */
-    public function setPostalCode(string $postalCode): ImportOrderDto
+    public function setPostalCode( $postalCode)
     {
         $this->postalCode = $postalCode;
 
@@ -471,7 +471,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getCity(): string
+    public function getCity()
     {
         return $this->city;
     }
@@ -480,7 +480,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $city
      * @return ImportOrderDto
      */
-    public function setCity(string $city): ImportOrderDto
+    public function setCity( $city)
     {
         $this->city = $city;
 
@@ -490,7 +490,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getState(): string
+    public function getState()
     {
         return $this->state;
     }
@@ -499,7 +499,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $state
      * @return ImportOrderDto
      */
-    public function setState(string $state): ImportOrderDto
+    public function setState( $state)
     {
         $this->state = $state;
 
@@ -509,7 +509,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getCountry(): string
+    public function getCountry()
     {
         return $this->country;
     }
@@ -518,7 +518,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $country
      * @return ImportOrderDto
      */
-    public function setCountry(string $country): ImportOrderDto
+    public function setCountry( $country)
     {
         $this->country = $country;
 
@@ -528,7 +528,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getEmailAddress(): string
+    public function getEmailAddress()
     {
         return $this->emailAddress;
     }
@@ -537,7 +537,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $emailAddress
      * @return ImportOrderDto
      */
-    public function setEmailAddress(string $emailAddress): ImportOrderDto
+    public function setEmailAddress( $emailAddress)
     {
         $this->emailAddress = $emailAddress;
 
@@ -547,7 +547,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getPhoneNumber(): string
+    public function getPhoneNumber()
     {
         return $this->phoneNumber;
     }
@@ -556,7 +556,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $phoneNumber
      * @return ImportOrderDto
      */
-    public function setPhoneNumber(string $phoneNumber): ImportOrderDto
+    public function setPhoneNumber( $phoneNumber)
     {
         $this->phoneNumber = $phoneNumber;
 
@@ -566,7 +566,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getIpAddress(): string
+    public function getIpAddress()
     {
         return $this->ipAddress;
     }
@@ -575,7 +575,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $ipAddress
      * @return ImportOrderDto
      */
-    public function setIpAddress(string $ipAddress): ImportOrderDto
+    public function setIpAddress( $ipAddress)
     {
         $this->ipAddress = $ipAddress;
 
@@ -585,7 +585,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return bool
      */
-    public function isBillShipSame(): bool
+    public function isBillShipSame()
     {
         return $this->billShipSame ? "1" : "0";
     }
@@ -594,7 +594,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param bool $billShipSame
      * @return ImportOrderDto
      */
-    public function setBillShipSame(bool $billShipSame): ImportOrderDto
+    public function setBillShipSame($billShipSame)
     {
         $this->billShipSame = $billShipSame;
 
@@ -604,7 +604,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getShipFirstName(): string
+    public function getShipFirstName()
     {
         return $this->shipFirstName;
     }
@@ -613,7 +613,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $shipFirstName
      * @return ImportOrderDto
      */
-    public function setShipFirstName(string $shipFirstName): ImportOrderDto
+    public function setShipFirstName( $shipFirstName)
     {
         $this->shipFirstName = $shipFirstName;
 
@@ -623,7 +623,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getShipLastName(): string
+    public function getShipLastName()
     {
         return $this->shipLastName;
     }
@@ -632,7 +632,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $shipLastName
      * @return ImportOrderDto
      */
-    public function setShipLastName(string $shipLastName): ImportOrderDto
+    public function setShipLastName( $shipLastName)
     {
         $this->shipLastName = $shipLastName;
 
@@ -642,7 +642,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getShipCompanyName(): string
+    public function getShipCompanyName()
     {
         return $this->shipCompanyName;
     }
@@ -651,7 +651,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $shipCompanyName
      * @return ImportOrderDto
      */
-    public function setShipCompanyName(string $shipCompanyName): ImportOrderDto
+    public function setShipCompanyName( $shipCompanyName)
     {
         $this->shipCompanyName = $shipCompanyName;
 
@@ -661,7 +661,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getShipAddress1(): string
+    public function getShipAddress1()
     {
         return $this->shipAddress1;
     }
@@ -670,7 +670,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $shipAddress1
      * @return ImportOrderDto
      */
-    public function setShipAddress1(string $shipAddress1): ImportOrderDto
+    public function setShipAddress1( $shipAddress1)
     {
         $this->shipAddress1 = $shipAddress1;
 
@@ -680,7 +680,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getShipAddress2(): string
+    public function getShipAddress2()
     {
         return $this->shipAddress2;
     }
@@ -689,7 +689,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $shipAddress2
      * @return ImportOrderDto
      */
-    public function setShipAddress2(string $shipAddress2): ImportOrderDto
+    public function setShipAddress2( $shipAddress2)
     {
         $this->shipAddress2 = $shipAddress2;
 
@@ -699,7 +699,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getShipPostalCode(): string
+    public function getShipPostalCode()
     {
         return $this->shipPostalCode;
     }
@@ -708,7 +708,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $shipPostalCode
      * @return ImportOrderDto
      */
-    public function setShipPostalCode(string $shipPostalCode): ImportOrderDto
+    public function setShipPostalCode( $shipPostalCode)
     {
         $this->shipPostalCode = $shipPostalCode;
 
@@ -718,7 +718,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getShipCity(): string
+    public function getShipCity()
     {
         return $this->shipCity;
     }
@@ -727,7 +727,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $shipCity
      * @return ImportOrderDto
      */
-    public function setShipCity(string $shipCity): ImportOrderDto
+    public function setShipCity( $shipCity)
     {
         $this->shipCity = $shipCity;
 
@@ -737,7 +737,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getShipState(): string
+    public function getShipState()
     {
         return $this->shipState;
     }
@@ -746,7 +746,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $shipState
      * @return ImportOrderDto
      */
-    public function setShipState(string $shipState): ImportOrderDto
+    public function setShipState( $shipState)
     {
         $this->shipState = $shipState;
 
@@ -756,7 +756,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getShipCountry(): string
+    public function getShipCountry()
     {
         return $this->shipCountry;
     }
@@ -765,7 +765,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $shipCountry
      * @return ImportOrderDto
      */
-    public function setShipCountry(string $shipCountry): ImportOrderDto
+    public function setShipCountry( $shipCountry)
     {
         $this->shipCountry = $shipCountry;
 
@@ -775,7 +775,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getPaySource(): string
+    public function getPaySource()
     {
         return $this->paySource;
     }
@@ -784,7 +784,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $paySource
      * @return ImportOrderDto
      */
-    public function setPaySource(string $paySource = self::PAYSOURCE_CREDITCARD): ImportOrderDto
+    public function setPaySource( $paySource = self::PAYSOURCE_CREDITCARD)
     {
         switch ($paySource) {
             case self::PAYSOURCE_CREDITCARD:
@@ -803,7 +803,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return int
      */
-    public function getCardNumber(): int
+    public function getCardNumber()
     {
         return $this->cardNumber;
     }
@@ -812,7 +812,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $cardNumber
      * @return ImportOrderDto
      */
-    public function setCardNumber(string $cardNumber): ImportOrderDto
+    public function setCardNumber( $cardNumber)
     {
         $this->cardNumber = $cardNumber;
 
@@ -822,7 +822,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getCardMonth(): string
+    public function getCardMonth()
     {
         return $this->cardMonth;
     }
@@ -831,7 +831,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $cardMonth
      * @return ImportOrderDto
      */
-    public function setCardMonth(string $cardMonth): ImportOrderDto
+    public function setCardMonth( $cardMonth)
     {
         $this->cardMonth = $cardMonth;
 
@@ -841,7 +841,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getCardYear(): string
+    public function getCardYear()
     {
         return $this->cardYear;
     }
@@ -850,7 +850,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $cardYear
      * @return ImportOrderDto
      */
-    public function setCardYear(string $cardYear): ImportOrderDto
+    public function setCardYear( $cardYear)
     {
         $this->cardYear = $cardYear;
 
@@ -860,7 +860,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return int
      */
-    public function getCardSecurityCode(): int
+    public function getCardSecurityCode()
     {
         return $this->cardSecurityCode;
     }
@@ -869,7 +869,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $cardSecurityCode
      * @return ImportOrderDto
      */
-    public function setCardSecurityCode(string $cardSecurityCode): ImportOrderDto
+    public function setCardSecurityCode( $cardSecurityCode)
     {
         $this->cardSecurityCode = $cardSecurityCode;
 
@@ -879,7 +879,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return int
      */
-    public function getForceMerchantId(): int
+    public function getForceMerchantId()
     {
         return $this->forceMerchantId;
     }
@@ -888,7 +888,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param int $forceMerchantId
      * @return ImportOrderDto
      */
-    public function setForceMerchantId(int $forceMerchantId): ImportOrderDto
+    public function setForceMerchantId($forceMerchantId)
     {
         $this->forceMerchantId = $forceMerchantId;
 
@@ -898,7 +898,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return int
      */
-    public function getPreAuthBillerId(): int
+    public function getPreAuthBillerId()
     {
         return $this->preAuthBillerId;
     }
@@ -907,7 +907,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param int $preAuthBillerId
      * @return ImportOrderDto
      */
-    public function setPreAuthBillerId(int $preAuthBillerId): ImportOrderDto
+    public function setPreAuthBillerId($preAuthBillerId)
     {
         $this->preAuthBillerId = $preAuthBillerId;
 
@@ -917,7 +917,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getPreAuthMerchantTxnId(): string
+    public function getPreAuthMerchantTxnId()
     {
         return $this->preAuthMerchantTxnId;
     }
@@ -926,7 +926,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $preAuthMerchantTxnId
      * @return ImportOrderDto
      */
-    public function setPreAuthMerchantTxnId(string $preAuthMerchantTxnId): ImportOrderDto
+    public function setPreAuthMerchantTxnId( $preAuthMerchantTxnId)
     {
         $this->preAuthMerchantTxnId = $preAuthMerchantTxnId;
 
@@ -936,7 +936,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return float
      */
-    public function getSalesTax(): float
+    public function getSalesTax()
     {
         return $this->salesTax;
     }
@@ -945,7 +945,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param float $salesTax
      * @return ImportOrderDto
      */
-    public function setSalesTax(float $salesTax): ImportOrderDto
+    public function setSalesTax( $salesTax)
     {
         $this->salesTax = $salesTax;
 
@@ -955,7 +955,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return int
      */
-    public function getAchAccountType(): int
+    public function getAchAccountType()
     {
         return $this->achAccountType;
     }
@@ -964,7 +964,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param int $achAccountType
      * @return ImportOrderDto
      */
-    public function setAchAccountType(int $achAccountType): ImportOrderDto
+    public function setAchAccountType($achAccountType)
     {
         $this->achAccountType = $achAccountType;
 
@@ -974,7 +974,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return int
      */
-    public function getAchRoutingNumber(): int
+    public function getAchRoutingNumber()
     {
         return $this->achRoutingNumber;
     }
@@ -983,7 +983,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param int $achRoutingNumber
      * @return ImportOrderDto
      */
-    public function setAchRoutingNumber(int $achRoutingNumber): ImportOrderDto
+    public function setAchRoutingNumber($achRoutingNumber)
     {
         $this->achRoutingNumber = $achRoutingNumber;
 
@@ -993,7 +993,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return int
      */
-    public function getAchAccountNumber(): int
+    public function getAchAccountNumber()
     {
         return $this->achAccountNumber;
     }
@@ -1002,7 +1002,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param int $achAccountNumber
      * @return ImportOrderDto
      */
-    public function setAchAccountNumber(int $achAccountNumber): ImportOrderDto
+    public function setAchAccountNumber($achAccountNumber)
     {
         $this->achAccountNumber = $achAccountNumber;
 
@@ -1012,7 +1012,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return int
      */
-    public function getCampaignId(): int
+    public function getCampaignId()
     {
         return $this->campaignId;
     }
@@ -1021,7 +1021,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param int $campaignId
      * @return ImportOrderDto
      */
-    public function setCampaignId(int $campaignId): ImportOrderDto
+    public function setCampaignId($campaignId)
     {
         $this->campaignId = $campaignId;
 
@@ -1031,7 +1031,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return bool
      */
-    public function isForceQA(): bool
+    public function isForceQA()
     {
         return $this->forceQA ? "1" : "0";
     }
@@ -1040,7 +1040,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param bool $forceQA
      * @return ImportOrderDto
      */
-    public function setForceQA(bool $forceQA): ImportOrderDto
+    public function setForceQA($forceQA)
     {
         $this->forceQA = $forceQA;
 
@@ -1050,7 +1050,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return bool
      */
-    public function isInsureShipment(): bool
+    public function isInsureShipment()
     {
         return $this->insureShipment ? "1" : "0";
     }
@@ -1059,7 +1059,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param bool $insureShipment
      * @return ImportOrderDto
      */
-    public function setInsureShipment(bool $insureShipment): ImportOrderDto
+    public function setInsureShipment($insureShipment)
     {
         $this->insureShipment = $insureShipment;
 
@@ -1088,7 +1088,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return int
      */
-    public function getShipProfileId(): int
+    public function getShipProfileId()
     {
         return $this->shipProfileId;
     }
@@ -1097,7 +1097,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param int $shipProfileId
      * @return ImportOrderDto
      */
-    public function setShipProfileId(int $shipProfileId): ImportOrderDto
+    public function setShipProfileId($shipProfileId)
     {
         $this->shipProfileId = $shipProfileId;
 
@@ -1107,7 +1107,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getSalesUrl(): string
+    public function getSalesUrl()
     {
         return $this->salesUrl;
     }
@@ -1116,7 +1116,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $salesUrl
      * @return ImportOrderDto
      */
-    public function setSalesUrl(string $salesUrl): ImportOrderDto
+    public function setSalesUrl( $salesUrl)
     {
         $this->salesUrl = $salesUrl;
 
@@ -1126,7 +1126,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getAffId(): string
+    public function getAffId()
     {
         return $this->affId;
     }
@@ -1135,7 +1135,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $affId
      * @return ImportOrderDto
      */
-    public function setAffId(string $affId): ImportOrderDto
+    public function setAffId( $affId)
     {
         $this->affId = $affId;
 
@@ -1145,7 +1145,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getSourceValue1(): string
+    public function getSourceValue1()
     {
         return $this->sourceValue1;
     }
@@ -1154,7 +1154,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $sourceValue1
      * @return ImportOrderDto
      */
-    public function setSourceValue1(string $sourceValue1): ImportOrderDto
+    public function setSourceValue1( $sourceValue1)
     {
         $this->sourceValue1 = $sourceValue1;
 
@@ -1164,7 +1164,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getSourceValue2(): string
+    public function getSourceValue2()
     {
         return $this->sourceValue2;
     }
@@ -1173,7 +1173,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $sourceValue2
      * @return ImportOrderDto
      */
-    public function setSourceValue2(string $sourceValue2): ImportOrderDto
+    public function setSourceValue2( $sourceValue2)
     {
         $this->sourceValue2 = $sourceValue2;
 
@@ -1183,7 +1183,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getSourceValue3(): string
+    public function getSourceValue3()
     {
         return $this->sourceValue3;
     }
@@ -1192,7 +1192,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $sourceValue3
      * @return ImportOrderDto
      */
-    public function setSourceValue3(string $sourceValue3): ImportOrderDto
+    public function setSourceValue3( $sourceValue3)
     {
         $this->sourceValue3 = $sourceValue3;
 
@@ -1202,7 +1202,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getSourceValue4(): string
+    public function getSourceValue4()
     {
         return $this->sourceValue4;
     }
@@ -1211,7 +1211,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $sourceValue4
      * @return ImportOrderDto
      */
-    public function setSourceValue4(string $sourceValue4): ImportOrderDto
+    public function setSourceValue4( $sourceValue4)
     {
         $this->sourceValue4 = $sourceValue4;
 
@@ -1221,7 +1221,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getSourceValue5(): string
+    public function getSourceValue5()
     {
         return $this->sourceValue5;
     }
@@ -1230,7 +1230,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $sourceValue5
      * @return ImportOrderDto
      */
-    public function setSourceValue5(string $sourceValue5): ImportOrderDto
+    public function setSourceValue5( $sourceValue5)
     {
         $this->sourceValue5 = $sourceValue5;
 
@@ -1240,7 +1240,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getCustom1(): string
+    public function getCustom1()
     {
         return $this->custom1;
     }
@@ -1249,7 +1249,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $custom1
      * @return ImportOrderDto
      */
-    public function setCustom1(string $custom1): ImportOrderDto
+    public function setCustom1( $custom1)
     {
         $this->custom1 = $custom1;
 
@@ -1259,7 +1259,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getCustom2(): string
+    public function getCustom2()
     {
         return $this->custom2;
     }
@@ -1268,7 +1268,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $custom2
      * @return ImportOrderDto
      */
-    public function setCustom2(string $custom2): ImportOrderDto
+    public function setCustom2( $custom2)
     {
         $this->custom2 = $custom2;
 
@@ -1278,7 +1278,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getCustom3(): string
+    public function getCustom3()
     {
         return $this->custom3;
     }
@@ -1287,7 +1287,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $custom3
      * @return ImportOrderDto
      */
-    public function setCustom3(string $custom3): ImportOrderDto
+    public function setCustom3( $custom3)
     {
         $this->custom3 = $custom3;
 
@@ -1297,7 +1297,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getCustom4(): string
+    public function getCustom4()
     {
         return $this->custom4;
     }
@@ -1306,7 +1306,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $custom4
      * @return ImportOrderDto
      */
-    public function setCustom4(string $custom4): ImportOrderDto
+    public function setCustom4( $custom4)
     {
         $this->custom4 = $custom4;
 
@@ -1316,7 +1316,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getCustom5(): string
+    public function getCustom5()
     {
         return $this->custom5;
     }
@@ -1325,7 +1325,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $custom5
      * @return ImportOrderDto
      */
-    public function setCustom5(string $custom5): ImportOrderDto
+    public function setCustom5( $custom5)
     {
         $this->custom5 = $custom5;
 
@@ -1335,7 +1335,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getRedirectsTo(): string
+    public function getRedirectsTo()
     {
         return $this->redirectsTo;
     }
@@ -1344,7 +1344,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $redirectsTo
      * @return ImportOrderDto
      */
-    public function setRedirectsTo(string $redirectsTo): ImportOrderDto
+    public function setRedirectsTo( $redirectsTo)
     {
         $this->redirectsTo = $redirectsTo;
 
@@ -1354,7 +1354,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getErrorRedirectsTo(): string
+    public function getErrorRedirectsTo()
     {
         return $this->errorRedirectsTo;
     }
@@ -1363,7 +1363,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $errorRedirectsTo
      * @return ImportOrderDto
      */
-    public function setErrorRedirectsTo(string $errorRedirectsTo): ImportOrderDto
+    public function setErrorRedirectsTo( $errorRedirectsTo)
     {
         $this->errorRedirectsTo = $errorRedirectsTo;
 
@@ -1373,7 +1373,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getEci(): string
+    public function getEci()
     {
         return $this->eci;
     }
@@ -1382,7 +1382,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $eci
      * @return ImportOrderDto
      */
-    public function setEci(string $eci): ImportOrderDto
+    public function setEci( $eci)
     {
         $this->eci = $eci;
 
@@ -1392,7 +1392,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getXid(): string
+    public function getXid()
     {
         return $this->xid;
     }
@@ -1401,7 +1401,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $xid
      * @return ImportOrderDto
      */
-    public function setXid(string $xid): ImportOrderDto
+    public function setXid( $xid)
     {
         $this->xid = $xid;
 
@@ -1411,7 +1411,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getCavv(): string
+    public function getCavv()
     {
         return $this->cavv;
     }
@@ -1420,7 +1420,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $cavv
      * @return ImportOrderDto
      */
-    public function setCavv(string $cavv): ImportOrderDto
+    public function setCavv( $cavv)
     {
         $this->cavv = $cavv;
 
@@ -1430,7 +1430,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getRebillEci(): string
+    public function getRebillEci()
     {
         return $this->rebill_eci;
     }
@@ -1439,7 +1439,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $rebill_eci
      * @return ImportOrderDto
      */
-    public function setRebillEci(string $rebill_eci): ImportOrderDto
+    public function setRebillEci( $rebill_eci)
     {
         $this->rebill_eci = $rebill_eci;
 
@@ -1449,7 +1449,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getRebillXid(): string
+    public function getRebillXid()
     {
         return $this->rebill_xid;
     }
@@ -1458,7 +1458,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $rebill_xid
      * @return ImportOrderDto
      */
-    public function setRebillXid(string $rebill_xid): ImportOrderDto
+    public function setRebillXid( $rebill_xid)
     {
         $this->rebill_xid = $rebill_xid;
 
@@ -1468,7 +1468,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getRebillCavv(): string
+    public function getRebillCavv()
     {
         return $this->rebill_cavv;
     }
@@ -1477,7 +1477,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param string $rebill_cavv
      * @return ImportOrderDto
      */
-    public function setRebillCavv(string $rebill_cavv): ImportOrderDto
+    public function setRebillCavv( $rebill_cavv)
     {
         $this->rebill_cavv = $rebill_cavv;
 
@@ -1487,7 +1487,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return bool
      */
-    public function isDisableCustomerDedup(): bool
+    public function isDisableCustomerDedup()
     {
         return $this->disableCustomerDedup ? "1" : "0";
     }
@@ -1496,7 +1496,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param bool $disableCustomerDedup
      * @return ImportOrderDto
      */
-    public function setDisableCustomerDedup(bool $disableCustomerDedup): ImportOrderDto
+    public function setDisableCustomerDedup($disableCustomerDedup)
     {
         $this->disableCustomerDedup = $disableCustomerDedup;
 
@@ -1505,7 +1505,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
 
     public function addProduct($productId, $quantity = 1, $priceOverride = null, $shippingPriceOverride = null)
     {
-        $this->products[$productId. " - " . \uniqid()] = [
+        $this->products[$productId. " - " . uniqid()] = [
             'id' => $productId,
             'qty' => $quantity,
             'price' => $priceOverride,
@@ -1517,7 +1517,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
 
     public function removeProduct($indexId)
     {
-        if (\array_key_exists($indexId, $this->products)) {
+        if (array_key_exists($indexId, $this->products)) {
             unset($this->products[$indexId]);
         }
     }
@@ -1525,7 +1525,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
     /**
      * @return array
      */
-    public function getProducts(): array
+    public function getProducts()
     {
         return $this->products;
     }
@@ -1534,7 +1534,7 @@ class ImportOrderDto extends AbstractKonnektiveDto
      * @param array $products
      * @return ImportOrderDto
      */
-    public function setProducts(array $products): ImportOrderDto
+    public function setProducts(array $products)
     {
         $this->products = $products;
 

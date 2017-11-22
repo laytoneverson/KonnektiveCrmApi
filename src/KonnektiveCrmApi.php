@@ -10,7 +10,7 @@ use LE\KonnektiveCrmApi\DTO;
  * Class KonnektiveCrmApi
  * @package LE\KonnektiveCrmApi
  */
-class KonnektiveCrmApi implements KonnektiveContantsInterface
+class KonnektiveCrmApi implements KonnektiveConstantsInterface
 {
     /**
      * @var KonnektiveConfig

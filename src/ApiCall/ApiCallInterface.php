@@ -10,9 +10,9 @@ use LE\KonnektiveCrmApi\DTO\AbstractKonnektiveDto;
  */
 interface ApiCallInterface
 {
-    public const RESULT_FORMAT_JSON = "json";
-    public const RESULT_FORMAT_ARRAY = "array";
-    public const RESULT_FORMAT_OBJECT = "object";
+    const RESULT_FORMAT_JSON = "json";
+    const RESULT_FORMAT_ARRAY = "array";
+    const RESULT_FORMAT_OBJECT = "object";
 
     /**
      * ApiCallInterface constructor.

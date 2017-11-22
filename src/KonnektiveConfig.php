@@ -41,7 +41,7 @@ class KonnektiveConfig
     /**
      * @return string
      */
-    public function getApiUserName(): string
+    public function getApiUserName()
     {
         return $this->apiUserName;
     }
@@ -49,7 +49,7 @@ class KonnektiveConfig
     /**
      * @return string
      */
-    public function getApiPassword(): string
+    public function getApiPassword()
     {
         return $this->apiPassword;
     }
@@ -57,7 +57,7 @@ class KonnektiveConfig
     /**
      * @return string
      */
-    public function getApiUrl(): string
+    public function getApiUrl()
     {
         return $this->apiUrl;
     }

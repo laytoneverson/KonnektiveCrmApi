@@ -12,10 +12,10 @@ use LE\KonnektiveCrmApi\KonnektiveCrmApi;
  */
 class ImportOrder extends AbstractApiCall
 {
-    public const API_URI = "/order/import/";
-    public const DTO_CLASS_FQN = ImportLeadDto::class;
-    public const CALL_NAME = 'OrderFunctions\ImportOrder';
-    public const REQUEST_METHOD = "POST";
+    const API_URI = "/order/import/";
+    const DTO_CLASS_FQN = ImportLeadDto::class;
+    const CALL_NAME = 'OrderFunctions\ImportOrder';
+    const REQUEST_METHOD = "POST";
 
     protected $requiredFields = [
         "firstName",

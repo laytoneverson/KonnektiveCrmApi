@@ -5,6 +5,7 @@ namespace LE\KonnektiveCrmApi\ApiCall;
 use LE\KonnektiveCrmApi\DTO\AbstractKonnektiveDto;
 use LE\KonnektiveCrmApi\Exception\MissingFieldException;
 use LE\KonnektiveCrmApi\Exception\MissingValueException;
+use function var_dump;
 
 /**
  * Class AbstractApiCall
@@ -12,10 +13,10 @@ use LE\KonnektiveCrmApi\Exception\MissingValueException;
  */
 class AbstractApiCall implements ApiCallInterface
 {
-    public const CALL_NAME = self::CALL_NAME;
-    public const DTO_CLASS_FQN = self::DTO_CLASS_FQN;
-    public const API_URI = self::API_URI;
-    public const REQUEST_METHOD = self::API_URI;
+    const CALL_NAME = self::CALL_NAME;
+    const DTO_CLASS_FQN = self::DTO_CLASS_FQN;
+    const API_URI = self::API_URI;
+    const REQUEST_METHOD = self::API_URI;
 
     /**
      * @var AbstractKonnektiveDto
@@ -94,7 +95,7 @@ class AbstractApiCall implements ApiCallInterface
         foreach ($this->requiredFields as $f) {
             $exception = false;
 
-            if (!\array_key_exists($f,$requestArray)) {
+            if (!array_key_exists($f,$requestArray)) {
                 $exception = new MissingFieldException(static::CALL_NAME, $f);
             }
 
@@ -103,18 +104,23 @@ class AbstractApiCall implements ApiCallInterface
             }
 
             if ($exception) {
+
                 $this->errorCode = $exception->getCode();
                 $this->errorMessage = $exception->getMessage();
+                var_dump($exception);
+                die('hi');
 
                 throw $exception;
             }
         }
+
+
     }
 
     /**
      * @return AbstractKonnektiveDto
      */
-    public function getRequestDataDTO(): AbstractKonnektiveDto
+    public function getRequestDataDTO()
     {
         return $this->requestDataDTO;
     }
@@ -123,7 +129,7 @@ class AbstractApiCall implements ApiCallInterface
      * @param AbstractKonnektiveDto $requestDataDTO
      * @return AbstractApiCall
      */
-    public function setRequestDataDTO(AbstractKonnektiveDto $requestDataDTO): AbstractApiCall
+    public function setRequestDataDTO(AbstractKonnektiveDto $requestDataDTO)
     {
         $this->requestDataDTO = $requestDataDTO;
 
@@ -133,7 +139,7 @@ class AbstractApiCall implements ApiCallInterface
     /**
      * @return array
      */
-    public function getRequestDataArray(): array
+    public function getRequestDataArray()
     {
         if (0 === count($this->requestDataArray)) {
             $this->requestDataArray = $this->requestDataDTO->toArray();
@@ -146,7 +152,7 @@ class AbstractApiCall implements ApiCallInterface
     /**
      * @return bool
      */
-    public function isResultSuccess(): bool
+    public function isResultSuccess()
     {
         return $this->resultSuccess;
     }
@@ -155,7 +161,7 @@ class AbstractApiCall implements ApiCallInterface
      * @param bool $resultSuccess
      * @return AbstractApiCall
      */
-    public function setResultSuccess(bool $resultSuccess): AbstractApiCall
+    public function setResultSuccess($resultSuccess)
     {
         $this->resultSuccess = $resultSuccess;
 
@@ -165,7 +171,7 @@ class AbstractApiCall implements ApiCallInterface
     /**
      * @return string
      */
-    public function getResultMessage(): string
+    public function getResultMessage()
     {
         return $this->resultMessage;
     }
@@ -174,7 +180,7 @@ class AbstractApiCall implements ApiCallInterface
      * @param string $resultMessage
      * @return AbstractApiCall
      */
-    public function setResultMessage(string $resultMessage): AbstractApiCall
+    public function setResultMessage($resultMessage)
     {
         $this->resultMessage = $resultMessage;
 
@@ -187,17 +193,17 @@ class AbstractApiCall implements ApiCallInterface
      *
      * @return string|array|object Request Result
      */
-    public function getResultData($format = ApiCallInterface::RESULT_FORMAT_ARRAY): string
+    public function getResultData($format = ApiCallInterface::RESULT_FORMAT_ARRAY)
     {
         switch ($format) {
             case ApiCallInterface::RESULT_FORMAT_ARRAY:
-                return \GuzzleHttp\json_decode($this->resultData, true);
-
-            case ApiCallInterface::RESULT_FORMAT_OBJECT:
-                return \GuzzleHttp\json_decode($this->resultData);
-
-            case ApiCallInterface::RESULT_FORMAT_JSON:
                 return $this->resultData;
+                break;
+            case ApiCallInterface::RESULT_FORMAT_OBJECT:
+                return (object)$this->resultData;
+                break;
+            case ApiCallInterface::RESULT_FORMAT_JSON:
+                return json_encode($this->resultData);
         }
 
         return $this->resultData;
@@ -207,7 +213,7 @@ class AbstractApiCall implements ApiCallInterface
      * @param string $resultData
      * @return AbstractApiCall
      */
-    public function setResultData(string $resultData): AbstractApiCall
+    public function setResultData($resultData)
     {
         $this->resultData = $resultData;
 
@@ -217,7 +223,7 @@ class AbstractApiCall implements ApiCallInterface
     /**
      * @return string
      */
-    public function getErrorMessage(): string
+    public function getErrorMessage()
     {
         return $this->errorMessage;
     }
@@ -226,7 +232,7 @@ class AbstractApiCall implements ApiCallInterface
      * @param string $errorMessage
      * @return AbstractApiCall
      */
-    public function setErrorMessage(string $errorMessage): AbstractApiCall
+    public function setErrorMessage($errorMessage)
     {
         $this->errorMessage = $errorMessage;
 
@@ -236,7 +242,7 @@ class AbstractApiCall implements ApiCallInterface
     /**
      * @return string
      */
-    public function getErrorCode(): string
+    public function getErrorCode()
     {
         return $this->errorCode;
     }
@@ -245,7 +251,7 @@ class AbstractApiCall implements ApiCallInterface
      * @param string $errorCode
      * @return AbstractApiCall
      */
-    public function setErrorCode(string $errorCode): AbstractApiCall
+    public function setErrorCode($errorCode)
     {
         $this->errorCode = $errorCode;
 

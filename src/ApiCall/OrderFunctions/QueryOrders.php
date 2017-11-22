@@ -9,8 +9,8 @@ use LE\KonnektiveCrmApi\ApiCall\AbstractApiCall;
  */
 class QueryOrders extends AbstractApiCall
 {
-    public const API_URI = '/order/query/';
-    public const DTO_CLASS_FQN = '';
-    public const CALL_NAME = 'OrderFunctions\QueryOrders';
-    public const REQUEST_METHOD = "POST";
+     const API_URI = '/order/query/';
+     const DTO_CLASS_FQN = '';
+     const CALL_NAME = 'OrderFunctions\QueryOrders';
+     const REQUEST_METHOD = "POST";
 }

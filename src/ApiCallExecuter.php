@@ -28,8 +28,7 @@ class ApiCallExecuter
 
     public function __construct(KonnektiveConfig $config)
     {
-        $this->client = new Client(['base_uri' => $config->getApiUrl()]);
-
+        $this->client = new Client(['base_uri' => $config->getApiUrl(), 'verify' => false]);
         $this->config = $config;
     }
 
@@ -48,6 +47,7 @@ class ApiCallExecuter
         //Internal Validation
         try {
             $this->apiCall->validate();
+
         } catch (KonnektiveApiException $exception) {
             $this->apiCall
                 ->setResultSuccess(false)
@@ -82,10 +82,9 @@ class ApiCallExecuter
 
             return false;
         }
-
         $responseData = \GuzzleHttp\json_decode($response->getBody(), true);
 
-        if (!\array_key_exists('result', $responseData)) {
+        if (!array_key_exists('result', $responseData)) {
             $this->apiCall->setResultSuccess(false)
                 ->setResultMessage("Unable to read response")
                 ->setResultData($responseData);
@@ -116,6 +115,6 @@ class ApiCallExecuter
 
     private function getRequestBody($asString = false)
     {
-        return  \array_merge($this->config->toArray(), $this->apiCall->getRequestDataArray());
+        return  array_merge($this->config->toArray(), $this->apiCall->getRequestDataArray());
     }
 }

@@ -21,10 +21,10 @@ abstract class AbstractKonnektiveDto
     public function __construct($data = [])
     {
         foreach ($data as $k => $v) {
-            $setter = "set" . \ucfirst($k);
+            $setter = "set" . ucfirst($k);
             $callableFunc = [$this, $setter];
 
-            if (\is_callable($callableFunc)) {
+            if (is_callable($callableFunc)) {
                 $callableFunc($v);
             }
         }
@@ -37,7 +37,6 @@ abstract class AbstractKonnektiveDto
     {
         $reflectedClass = new ReflectionClass($this);
         $methods = $reflectedClass->getMethods();
-
         /**
          * Gets all values from "getter" functions and loads them in an assoc array.
          *

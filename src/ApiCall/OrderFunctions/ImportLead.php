@@ -12,10 +12,10 @@ use LE\KonnektiveCrmApi\KonnektiveCrmApi;
  */
 class ImportLead extends AbstractApiCall
 {
-    public const API_URI = '/leads/import/';
-    public const DTO_CLASS_FQN = ImportLeadDto::class;
-    public const CALL_NAME = 'OrderFunctions\ImportLead';
-    public const REQUEST_METHOD = "POST";
+    const API_URI = '/leads/import/';
+    const DTO_CLASS_FQN = ImportLeadDto::class;
+    const CALL_NAME = 'OrderFunctions\ImportLead';
+    const REQUEST_METHOD = "POST";
 
     protected $requiredFields = [
         "firstName",
@@ -28,13 +28,6 @@ class ImportLead extends AbstractApiCall
         "emailAddress",
         "phoneNumber",
         "ipAddress",
-        "shipFirstName",
-        "shipLastName",
-        "shipAddress1",
-        "shipPostalCode",
-        "shipCity",
-        "shipState",
-        "shipCountry",
         "campaignId",
     ];
 }

@@ -10,8 +10,8 @@ use LE\KonnektiveCrmApi\ApiCall\AbstractApiCall;
  */
 class RefundOrder extends AbstractApiCall
 {
-    public const API_URI = '/order/refund';
-    public const DTO_CLASS_FQN = '';
-    public const CALL_NAME = 'OrderFunctions\RefundOrder';
-    public const REQUEST_METHOD = "POST";
+    const API_URI = '/order/refund';
+    const DTO_CLASS_FQN = '';
+    const CALL_NAME = 'OrderFunctions\RefundOrder';
+    const REQUEST_METHOD = "POST";
 }

@@ -10,8 +10,8 @@ use LE\KonnektiveCrmApi\ApiCall\AbstractApiCall;
  */
 class CancelOrder extends AbstractApiCall
 {
-    public const API_URI = '/order/cancel/';
-    public const DTO_CLASS_FQN = '';
-    public const CALL_NAME = 'OrderFunctions\CancelOrder';
-    public const REQUEST_METHOD = "POST";
+    const API_URI = '/order/cancel/';
+    const DTO_CLASS_FQN = '';
+    const CALL_NAME = 'OrderFunctions\CancelOrder';
+    const REQUEST_METHOD = "POST";
 }

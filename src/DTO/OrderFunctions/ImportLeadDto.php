@@ -13,167 +13,167 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @var string
      */
-    protected $orderId;
+    protected $orderId = "";
 
     /**
      * @var string
      */
-    protected $firstName;
+    protected $firstName = "";
 
     /**
      * @var string
      */
-    protected $lastName;
+    protected $lastName = "";
 
     /**
      * @var string
      */
-    protected $companyName;
+    protected $companyName = "";
 
     /**
      * @var string
      */
-    protected $address1;
+    protected $address1 = "";
 
     /**
      * @var string
      */
-    protected $address2;
+    protected $address2 = "";
 
     /**
      * @var string
      */
-    protected $postalCode;
+    protected $postalCode = "";
 
     /**
      * @var string
      */
-    protected $city;
+    protected $city = "";
 
     /**
      * @var string
      */
-    protected $state;
+    protected $state = "";
 
     /**
      * @var string
      */
-    protected $country;
+    protected $country = "";
 
     /**
      * @var string
      */
-    protected $emailAddress;
+    protected $emailAddress = "";
 
     /**
      * @var string
      */
-    protected $phoneNumber;
+    protected $phoneNumber = "";
 
     /**
      * @var string
      */
-    protected $ipAddress;
+    protected $ipAddress = "";
 
     /**
      * @var boolean
      */
-    protected $billShipSame;
+    protected $billShipSame = 1;
 
     /**
      * @var string
      */
-    protected $shipFirstName;
+    protected $shipFirstName = "";
 
     /**
      * @var string
      */
-    protected $shipLastName;
+    protected $shipLastName = "";
 
     /**
      * @var string
      */
-    protected $shipCompanyName;
+    protected $shipCompanyName = "";
 
     /**
      * @var string
      */
-    protected $shipAddress1;
+    protected $shipAddress1 = "";
 
     /**
      * @var string
      */
-    protected $shipAddress2;
+    protected $shipAddress2 = "";
 
     /**
      * @var string
      */
-    protected $shipPostalCode;
+    protected $shipPostalCode = "";
 
     /**
      * @var string
      */
-    protected $shipCity;
+    protected $shipCity = "";
 
     /**
      * @var string
      */
-    protected $shipState;
+    protected $shipState = "";
 
     /**
      * @var string
      */
-    protected $shipCountry;
+    protected $shipCountry = "";
 
     /**
      * @var integer
      */
-    protected $campaignId;
+    protected $campaignId = 0;
 
     /**
      * @var string
      */
-    protected $affId;
+    protected $affId = "";
 
     /**
      * @var string
      */
-    protected $sourceValue1;
+    protected $sourceValue1 = "";
 
     /**
      * @var string
      */
-    protected $sourceValue2;
+    protected $sourceValue2 = "";
 
     /**
      * @var string
      */
-    protected $sourceValue3;
+    protected $sourceValue3 = "";
 
     /**
      * @var string
      */
-    protected $custom1;
+    protected $custom1 = "";
 
     /**
      * @var string
      */
-    protected $custom2;
+    protected $custom2 = "";
 
     /**
      * @var string
      */
-    protected $custom3;
+    protected $custom3 = "";
 
     /**
      * @var string
      */
-    protected $custom4;
+    protected $custom4 = "";
 
     /**
      * @var string
      */
-    protected $custom5;
+    protected $custom5 = "";
 
     /**
      * @var boolean
@@ -183,7 +183,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getOrderId(): string
+    public function getOrderId()
     {
         return $this->orderId;
     }
@@ -192,7 +192,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
      * @param string $orderId
      * @return ImportLeadDto
      */
-    public function setOrderId(string $orderId): ImportLeadDto
+    public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
 
@@ -202,7 +202,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getFirstName(): string
+    public function getFirstName()
     {
         return $this->firstName;
     }
@@ -211,7 +211,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
      * @param string $firstName
      * @return ImportLeadDto
      */
-    public function setFirstName(string $firstName): ImportLeadDto
+    public function setFirstName($firstName)
     {
         $this->firstName = $firstName;
 
@@ -221,7 +221,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getLastName(): string
+    public function getLastName()
     {
         return $this->lastName;
     }
@@ -230,7 +230,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
      * @param string $lastName
      * @return ImportLeadDto
      */
-    public function setLastName(string $lastName): ImportLeadDto
+    public function setLastName($lastName)
     {
         $this->lastName = $lastName;
 
@@ -240,7 +240,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getCompanyName(): string
+    public function getCompanyName()
     {
         return $this->companyName;
     }
@@ -249,7 +249,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
      * @param string $companyName
      * @return ImportLeadDto
      */
-    public function setCompanyName(string $companyName): ImportLeadDto
+    public function setCompanyName($companyName)
     {
         $this->companyName = $companyName;
 
@@ -259,7 +259,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getAddress1(): string
+    public function getAddress1()
     {
         return $this->address1;
     }
@@ -268,7 +268,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
      * @param string $address1
      * @return ImportLeadDto
      */
-    public function setAddress1(string $address1): ImportLeadDto
+    public function setAddress1($address1)
     {
         $this->address1 = $address1;
 
@@ -278,7 +278,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getAddress2(): string
+    public function getAddress2()
     {
         return $this->address2;
     }
@@ -287,7 +287,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
      * @param string $address2
      * @return ImportLeadDto
      */
-    public function setAddress2(string $address2): ImportLeadDto
+    public function setAddress2($address2)
     {
         $this->address2 = $address2;
 
@@ -297,7 +297,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getPostalCode(): string
+    public function getPostalCode()
     {
         return $this->postalCode;
     }
@@ -306,7 +306,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
      * @param string $postalCode
      * @return ImportLeadDto
      */
-    public function setPostalCode(string $postalCode): ImportLeadDto
+    public function setPostalCode($postalCode)
     {
         $this->postalCode = $postalCode;
 
@@ -316,7 +316,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getCity(): string
+    public function getCity()
     {
         return $this->city;
     }
@@ -325,7 +325,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
      * @param string $city
      * @return ImportLeadDto
      */
-    public function setCity(string $city): ImportLeadDto
+    public function setCity($city)
     {
         $this->city = $city;
 
@@ -335,7 +335,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getState(): string
+    public function getState()
     {
         return $this->state;
     }
@@ -344,7 +344,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
      * @param string $state
      * @return ImportLeadDto
      */
-    public function setState(string $state): ImportLeadDto
+    public function setState($state)
     {
         $this->state = $state;
 
@@ -354,7 +354,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getCountry(): string
+    public function getCountry()
     {
         return $this->country;
     }
@@ -363,7 +363,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
      * @param string $country
      * @return ImportLeadDto
      */
-    public function setCountry(string $country): ImportLeadDto
+    public function setCountry($country)
     {
         $this->country = $country;
 
@@ -373,7 +373,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getEmailAddress(): string
+    public function getEmailAddress()
     {
         return $this->emailAddress;
     }
@@ -382,7 +382,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
      * @param string $emailAddress
      * @return ImportLeadDto
      */
-    public function setEmailAddress(string $emailAddress): ImportLeadDto
+    public function setEmailAddress($emailAddress)
     {
         $this->emailAddress = $emailAddress;
 
@@ -392,7 +392,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getPhoneNumber(): string
+    public function getPhoneNumber()
     {
         return $this->phoneNumber;
     }
@@ -401,7 +401,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
      * @param string $phoneNumber
      * @return ImportLeadDto
      */
-    public function setPhoneNumber(string $phoneNumber): ImportLeadDto
+    public function setPhoneNumber($phoneNumber)
     {
         $this->phoneNumber = $phoneNumber;
 
@@ -411,7 +411,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getIpAddress(): string
+    public function getIpAddress()
     {
         return $this->ipAddress;
     }
@@ -420,7 +420,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
      * @param string $ipAddress
      * @return ImportLeadDto
      */
-    public function setIpAddress(string $ipAddress): ImportLeadDto
+    public function setIpAddress($ipAddress)
     {
         $this->ipAddress = $ipAddress;
 
@@ -430,7 +430,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @return bool
      */
-    public function isBillShipSame(): bool
+    public function isBillShipSame()
     {
         return $this->billShipSame ? "1" : "0";
     }
@@ -439,7 +439,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
      * @param bool $billShipSame
      * @return ImportLeadDto
      */
-    public function setBillShipSame(bool $billShipSame): ImportLeadDto
+    public function setBillShipSame($billShipSame)
     {
         $this->billShipSame = $billShipSame;
 
@@ -449,7 +449,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getShipFirstName(): string
+    public function getShipFirstName()
     {
         return $this->shipFirstName;
     }
@@ -458,7 +458,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
      * @param string $shipFirstName
      * @return ImportLeadDto
      */
-    public function setShipFirstName(string $shipFirstName): ImportLeadDto
+    public function setShipFirstName($shipFirstName)
     {
         $this->shipFirstName = $shipFirstName;
 
@@ -468,7 +468,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getShipLastName(): string
+    public function getShipLastName()
     {
         return $this->shipLastName;
     }
@@ -477,7 +477,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
      * @param string $shipLastName
      * @return ImportLeadDto
      */
-    public function setShipLastName(string $shipLastName): ImportLeadDto
+    public function setShipLastName($shipLastName)
     {
         $this->shipLastName = $shipLastName;
 
@@ -487,7 +487,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getShipCompanyName(): string
+    public function getShipCompanyName()
     {
         return $this->shipCompanyName;
     }
@@ -496,7 +496,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
      * @param string $shipCompanyName
      * @return ImportLeadDto
      */
-    public function setShipCompanyName(string $shipCompanyName): ImportLeadDto
+    public function setShipCompanyName($shipCompanyName)
     {
         $this->shipCompanyName = $shipCompanyName;
 
@@ -506,7 +506,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getShipAddress1(): string
+    public function getShipAddress1()
     {
         return $this->shipAddress1;
     }
@@ -515,7 +515,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
      * @param string $shipAddress1
      * @return ImportLeadDto
      */
-    public function setShipAddress1(string $shipAddress1): ImportLeadDto
+    public function setShipAddress1($shipAddress1)
     {
         $this->shipAddress1 = $shipAddress1;
 
@@ -525,7 +525,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getShipAddress2(): string
+    public function getShipAddress2()
     {
         return $this->shipAddress2;
     }
@@ -534,7 +534,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
      * @param string $shipAddress2
      * @return ImportLeadDto
      */
-    public function setShipAddress2(string $shipAddress2): ImportLeadDto
+    public function setShipAddress2($shipAddress2)
     {
         $this->shipAddress2 = $shipAddress2;
 
@@ -544,7 +544,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getShipPostalCode(): string
+    public function getShipPostalCode()
     {
         return $this->shipPostalCode;
     }
@@ -553,7 +553,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
      * @param string $shipPostalCode
      * @return ImportLeadDto
      */
-    public function setShipPostalCode(string $shipPostalCode): ImportLeadDto
+    public function setShipPostalCode($shipPostalCode)
     {
         $this->shipPostalCode = $shipPostalCode;
 
@@ -563,7 +563,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getShipCity(): string
+    public function getShipCity()
     {
         return $this->shipCity;
     }
@@ -572,7 +572,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
      * @param string $shipCity
      * @return ImportLeadDto
      */
-    public function setShipCity(string $shipCity): ImportLeadDto
+    public function setShipCity($shipCity)
     {
         $this->shipCity = $shipCity;
 
@@ -582,7 +582,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getShipState(): string
+    public function getShipState()
     {
         return $this->shipState;
     }
@@ -591,7 +591,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
      * @param string $shipState
      * @return ImportLeadDto
      */
-    public function setShipState(string $shipState): ImportLeadDto
+    public function setShipState($shipState)
     {
         $this->shipState = $shipState;
 
@@ -601,7 +601,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getShipCountry(): string
+    public function getShipCountry()
     {
         return $this->shipCountry;
     }
@@ -610,7 +610,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
      * @param string $shipCountry
      * @return ImportLeadDto
      */
-    public function setShipCountry(string $shipCountry): ImportLeadDto
+    public function setShipCountry($shipCountry)
     {
         $this->shipCountry = $shipCountry;
 
@@ -620,7 +620,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @return int
      */
-    public function getCampaignId(): int
+    public function getCampaignId()
     {
         return $this->campaignId;
     }
@@ -629,7 +629,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
      * @param int $campaignId
      * @return ImportLeadDto
      */
-    public function setCampaignId(int $campaignId): ImportLeadDto
+    public function setCampaignId($campaignId)
     {
         $this->campaignId = $campaignId;
 
@@ -639,7 +639,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getAffId(): string
+    public function getAffId()
     {
         return $this->affId;
     }
@@ -648,7 +648,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
      * @param string $affId
      * @return ImportLeadDto
      */
-    public function setAffId(string $affId): ImportLeadDto
+    public function setAffId($affId)
     {
         $this->affId = $affId;
 
@@ -658,7 +658,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getSourceValue1(): string
+    public function getSourceValue1()
     {
         return $this->sourceValue1;
     }
@@ -667,7 +667,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
      * @param string $sourceValue1
      * @return ImportLeadDto
      */
-    public function setSourceValue1(string $sourceValue1): ImportLeadDto
+    public function setSourceValue1($sourceValue1)
     {
         $this->sourceValue1 = $sourceValue1;
 
@@ -677,7 +677,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getSourceValue2(): string
+    public function getSourceValue2()
     {
         return $this->sourceValue2;
     }
@@ -686,7 +686,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
      * @param string $sourceValue2
      * @return ImportLeadDto
      */
-    public function setSourceValue2(string $sourceValue2): ImportLeadDto
+    public function setSourceValue2($sourceValue2)
     {
         $this->sourceValue2 = $sourceValue2;
 
@@ -696,7 +696,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getSourceValue3(): string
+    public function getSourceValue3()
     {
         return $this->sourceValue3;
     }
@@ -705,7 +705,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
      * @param string $sourceValue3
      * @return ImportLeadDto
      */
-    public function setSourceValue3(string $sourceValue3): ImportLeadDto
+    public function setSourceValue3($sourceValue3)
     {
         $this->sourceValue3 = $sourceValue3;
 
@@ -715,7 +715,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getCustom1(): string
+    public function getCustom1()
     {
         return $this->custom1;
     }
@@ -724,7 +724,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
      * @param string $custom1
      * @return ImportLeadDto
      */
-    public function setCustom1(string $custom1): ImportLeadDto
+    public function setCustom1($custom1)
     {
         $this->custom1 = $custom1;
 
@@ -734,7 +734,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getCustom2(): string
+    public function getCustom2()
     {
         return $this->custom2;
     }
@@ -743,7 +743,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
      * @param string $custom2
      * @return ImportLeadDto
      */
-    public function setCustom2(string $custom2): ImportLeadDto
+    public function setCustom2($custom2)
     {
         $this->custom2 = $custom2;
 
@@ -753,7 +753,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getCustom3(): string
+    public function getCustom3()
     {
         return $this->custom3;
     }
@@ -762,7 +762,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
      * @param string $custom3
      * @return ImportLeadDto
      */
-    public function setCustom3(string $custom3): ImportLeadDto
+    public function setCustom3($custom3)
     {
         $this->custom3 = $custom3;
 
@@ -772,7 +772,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getCustom4(): string
+    public function getCustom4()
     {
         return $this->custom4;
     }
@@ -781,7 +781,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
      * @param string $custom4
      * @return ImportLeadDto
      */
-    public function setCustom4(string $custom4): ImportLeadDto
+    public function setCustom4($custom4)
     {
         $this->custom4 = $custom4;
 
@@ -791,7 +791,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @return string
      */
-    public function getCustom5(): string
+    public function getCustom5()
     {
         return $this->custom5;
     }
@@ -800,7 +800,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
      * @param string $custom5
      * @return ImportLeadDto
      */
-    public function setCustom5(string $custom5): ImportLeadDto
+    public function setCustom5($custom5)
     {
         $this->custom5 = $custom5;
 
@@ -810,7 +810,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @return bool
      */
-    public function isDisableCustomerDedup(): bool
+    public function isDisableCustomerDedup()
     {
         return $this->disableCustomerDedup ? "1" : "0";
     }
@@ -819,7 +819,7 @@ class ImportLeadDto extends AbstractKonnektiveDto
      * @param bool $disableCustomerDedup
      * @return ImportLeadDto
      */
-    public function setDisableCustomerDedup(bool $disableCustomerDedup): ImportLeadDto
+    public function setDisableCustomerDedup($disableCustomerDedup)
     {
         $this->disableCustomerDedup = $disableCustomerDedup;
 

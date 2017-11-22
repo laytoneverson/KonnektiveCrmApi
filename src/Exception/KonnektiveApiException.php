@@ -10,9 +10,9 @@ use Throwable;
  */
 class KonnektiveApiException extends \Exception
 {
-    public const ERROR_VALIDATION_FAILED = 1000;
-    public const ERROR_MISSING_FIELD_CODE = 1001;
-    public const ERROR_MISSING_VALUE_CODE = 1002;
+    const ERROR_VALIDATION_FAILED = 1000;
+    const ERROR_MISSING_FIELD_CODE = 1001;
+    const ERROR_MISSING_VALUE_CODE = 1002;
 
     protected $apiCall;
 
@@ -42,7 +42,7 @@ class KonnektiveApiException extends \Exception
     /**
      * @return string
      */
-    public function getApiCall(): string
+    public function getApiCall()
     {
         return $this->apiCall;
     }
@@ -50,7 +50,7 @@ class KonnektiveApiException extends \Exception
     /**
      * @param string $apiCall
      */
-    public function setApiCall(string $apiCall)
+    public function setApiCall($apiCall)
     {
         $this->apiCall = $apiCall;
     }
