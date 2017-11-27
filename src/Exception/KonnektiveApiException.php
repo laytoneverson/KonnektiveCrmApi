@@ -50,7 +50,7 @@ class KonnektiveApiException extends \Exception
     /**
      * @param string $apiCall
      */
-    public function setApiCall(string $apiCall)
+    public function setApiCall($apiCall)
     {
         $this->apiCall = $apiCall;
     }

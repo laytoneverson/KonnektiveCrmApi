@@ -13,167 +13,167 @@ class ImportLeadDto extends AbstractKonnektiveDto
     /**
      * @var string
      */
-    protected $orderId;
+    protected $orderId = "";
 
     /**
      * @var string
      */
-    protected $firstName;
+    protected $firstName = "";
 
     /**
      * @var string
      */
-    protected $lastName;
+    protected $lastName = "";
 
     /**
      * @var string
      */
-    protected $companyName;
+    protected $companyName = "";
 
     /**
      * @var string
      */
-    protected $address1;
+    protected $address1 = "";
 
     /**
      * @var string
      */
-    protected $address2;
+    protected $address2 = "";
 
     /**
      * @var string
      */
-    protected $postalCode;
+    protected $postalCode = "";
 
     /**
      * @var string
      */
-    protected $city;
+    protected $city = "";
 
     /**
      * @var string
      */
-    protected $state;
+    protected $state = "";
 
     /**
      * @var string
      */
-    protected $country;
+    protected $country = "";
 
     /**
      * @var string
      */
-    protected $emailAddress;
+    protected $emailAddress = "";
 
     /**
      * @var string
      */
-    protected $phoneNumber;
+    protected $phoneNumber = "";
 
     /**
      * @var string
      */
-    protected $ipAddress;
+    protected $ipAddress = "";
 
     /**
      * @var boolean
      */
-    protected $billShipSame;
+    protected $billShipSame = 1;
 
     /**
      * @var string
      */
-    protected $shipFirstName;
+    protected $shipFirstName = "";
 
     /**
      * @var string
      */
-    protected $shipLastName;
+    protected $shipLastName = "";
 
     /**
      * @var string
      */
-    protected $shipCompanyName;
+    protected $shipCompanyName = "";
 
     /**
      * @var string
      */
-    protected $shipAddress1;
+    protected $shipAddress1 = "";
 
     /**
      * @var string
      */
-    protected $shipAddress2;
+    protected $shipAddress2 = "";
 
     /**
      * @var string
      */
-    protected $shipPostalCode;
+    protected $shipPostalCode = "";
 
     /**
      * @var string
      */
-    protected $shipCity;
+    protected $shipCity = "";
 
     /**
      * @var string
      */
-    protected $shipState;
+    protected $shipState = "";
 
     /**
      * @var string
      */
-    protected $shipCountry;
+    protected $shipCountry = "";
 
     /**
      * @var integer
      */
-    protected $campaignId;
+    protected $campaignId = 0;
 
     /**
      * @var string
      */
-    protected $affId;
+    protected $affId = "";
 
     /**
      * @var string
      */
-    protected $sourceValue1;
+    protected $sourceValue1 = "";
 
     /**
      * @var string
      */
-    protected $sourceValue2;
+    protected $sourceValue2 = "";
 
     /**
      * @var string
      */
-    protected $sourceValue3;
+    protected $sourceValue3 = "";
 
     /**
      * @var string
      */
-    protected $custom1;
+    protected $custom1 = "";
 
     /**
      * @var string
      */
-    protected $custom2;
+    protected $custom2 = "";
 
     /**
      * @var string
      */
-    protected $custom3;
+    protected $custom3 = "";
 
     /**
      * @var string
      */
-    protected $custom4;
+    protected $custom4 = "";
 
     /**
      * @var string
      */
-    protected $custom5;
+    protected $custom5 = "";
 
     /**
      * @var boolean

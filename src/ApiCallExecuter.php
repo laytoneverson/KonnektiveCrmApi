@@ -28,8 +28,7 @@ class ApiCallExecuter
 
     public function __construct(KonnektiveConfig $config)
     {
-        $this->client = new Client(['base_uri' => $config->getApiUrl()]);
-
+        $this->client = new Client(['base_uri' => $config->getApiUrl(), 'verify' => false]);
         $this->config = $config;
     }
 
@@ -82,7 +81,6 @@ class ApiCallExecuter
 
             return false;
         }
-
         $responseData = \GuzzleHttp\json_decode($response->getBody(), true);
 
         if (!\array_key_exists('result', $responseData)) {

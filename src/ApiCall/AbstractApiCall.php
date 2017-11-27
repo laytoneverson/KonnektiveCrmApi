@@ -174,7 +174,7 @@ class AbstractApiCall implements ApiCallInterface
      * @param string $resultMessage
      * @return AbstractApiCall
      */
-    public function setResultMessage(string $resultMessage): AbstractApiCall
+    public function setResultMessage($resultMessage): AbstractApiCall
     {
         $this->resultMessage = $resultMessage;
 
@@ -191,13 +191,13 @@ class AbstractApiCall implements ApiCallInterface
     {
         switch ($format) {
             case ApiCallInterface::RESULT_FORMAT_ARRAY:
-                return \GuzzleHttp\json_decode($this->resultData, true);
+                return $this->resultData;
 
             case ApiCallInterface::RESULT_FORMAT_OBJECT:
-                return \GuzzleHttp\json_decode($this->resultData);
+                return (object)$this->resultData;
 
             case ApiCallInterface::RESULT_FORMAT_JSON:
-                return $this->resultData;
+                return json_encode($this->resultData);
         }
 
         return $this->resultData;

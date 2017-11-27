@@ -28,13 +28,6 @@ class ImportLead extends AbstractApiCall
         "emailAddress",
         "phoneNumber",
         "ipAddress",
-        "shipFirstName",
-        "shipLastName",
-        "shipAddress1",
-        "shipPostalCode",
-        "shipCity",
-        "shipState",
-        "shipCountry",
         "campaignId",
     ];
 }

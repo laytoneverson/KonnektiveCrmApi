@@ -49,7 +49,7 @@ class KonnektiveConfig
     /**
      * @return string
      */
-    public function getApiPassword(): string
+    public function getApiPassword()
     {
         return $this->apiPassword;
     }

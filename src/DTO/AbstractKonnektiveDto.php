@@ -37,7 +37,6 @@ abstract class AbstractKonnektiveDto
     {
         $reflectedClass = new ReflectionClass($this);
         $methods = $reflectedClass->getMethods();
-
         /**
          * Gets all values from "getter" functions and loads them in an assoc array.
          *

@@ -3,10 +3,10 @@
 namespace LE\KonnektiveCrmApi;
 
 /**
- * Interface KonnektiveContantsInterface
+ * Interface KonnektiveConstantsInterface
  * @package LE\KonnektiveCrmApi
  */
-interface KonnektiveContantsInterface
+interface KonnektiveConstantsInterface
 {
     /* API CALLS */
     public const CALL_IMPORT_CLICK = ApiCall\LandingPages\ImportClick::class;
